@@ -12,7 +12,6 @@ finurl=${finurl/http:\/\//}
 finurl=${finurl##www.}
 finurl=${finurl%%\/}
 
-
 desktop="$XDG_CURRENT_DESKTOP"
 if [ "$desktop" == "" ]; then
 	desktop="none"
