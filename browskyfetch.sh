@@ -2,8 +2,8 @@
 
 source /etc/os-release
 
+# url
 finurl=$HOME_URL
-
 finurl=${finurl/https:\/\//}
 finurl=${finurl/http:\/\//}
 finurl=${finurl##www.}
