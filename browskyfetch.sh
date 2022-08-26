@@ -5,8 +5,7 @@ source /etc/os-release
 # colours
 colour1="\e[1;32m"
 colour2="\e[0;32m"
-
-# url
+# url (this is dumb but im too retarded to figure out how to do it any other way)
 finurl=$HOME_URL
 finurl=${finurl/https:\/\//}
 finurl=${finurl/http:\/\//}
