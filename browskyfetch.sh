@@ -5,7 +5,9 @@ source /etc/os-release
 # colours
 colour1="\e[1;32m"
 colour2="\e[0;32m"
-# url (this is dumb but im too retarded to figure out how to do it any other way)
+colour3="\e[1;31m"
+
+# url (this is bad)
 finurl=$HOME_URL
 finurl=${finurl/https:\/\//}
 finurl=${finurl/http:\/\//}
@@ -17,7 +19,7 @@ if [ "$desktop" == "" ]; then
 	desktop="none"
 fi
 
-echo -e "\e[1;31mWelcome to $finurl, $(whoami)!"
+echo -e "${colour3}Welcome to $finurl, $(whoami)!"
 echo #-e "\e[0;30m\e[1;40m▀\e[0;31m\e[1;41m▀\e[0;32m\e[1;42m▀\e[0;33m\e[1;43m▀\e[0;34m\e[1;44m▀\e[0;35m\e[1;45m▀\e[0;36m\e[1;46m▀\e[0;37m\e[1;47m▀\e[0m"
 echo -e "${colour1}kernel   ${colour2}$(uname -sr)"
 echo -e "${colour1}arch     ${colour2}$(uname -m)"
