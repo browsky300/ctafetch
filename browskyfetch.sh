@@ -2,10 +2,11 @@
 
 source /etc/os-release
 
-nopreurl=${HOME_URL/https:\/\//}
-nopreurl=${nopreurl%%\/}
+finurl=${HOME_URL/https:\/\//}
+finurl=${finurl##www.}
+finurl=${finurl%%\/}
 
-echo "Welcome to $nopreurl, $(whoami)!"
+echo "Welcome to $finurl, $(whoami)!"
 echo 
 echo "Using the $(uname -s) kernel on version $(uname -r)"
 echo
