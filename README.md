@@ -1,6 +1,6 @@
 # browskyfetch
 
-![browskyfetch screenshot](browskyfetch.png)
+![browskyfetch screenshot](screenshot.png)
 
 Simple system information script written in bash. Mostly done but I might add more features later.
 
