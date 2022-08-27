@@ -1,5 +1,7 @@
 # browskyfetch
 
+![browskyfetch screenshot](browskyfetch.png)
+
 Simple system information script written in bash. Mostly done but I might add more features later.
 
 (also will probably change the name)
