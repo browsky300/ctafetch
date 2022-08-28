@@ -2,12 +2,10 @@
 
 source /etc/os-release
 
-# colours
 colour1="\e[1;32m"
 colour2="\e[0;32m"
 colour3="\e[1;31m"
 
-# url (this is bad)
 finurl=$HOME_URL
 finurl=${finurl/https:\/\//}
 finurl=${finurl/http:\/\//}
