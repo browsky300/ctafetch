@@ -16,4 +16,8 @@ Simple system information script written in bash. Mostly done but I might add mo
 - Uptime
 - Host machine name
 
+### TODO:
 
+- replace DE detection with WM detection
+- maybe add more hardware info
+- change name
