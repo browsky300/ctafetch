@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 source /etc/os-release
 
@@ -12,15 +12,22 @@ finurl=${finurl/http:\/\//}
 finurl=${finurl##www.}
 finurl=${finurl%%\/}
 
+
 desktop="$XDG_CURRENT_DESKTOP"
 if [ "$desktop" == "" ]; then
-	desktop="none"
+	desktop="$(xprop -root _NET_SUPPORTING_WM_CHECK)"
+	desktop="$(xprop -id "${desktop##*\# }" _NET_WM_NAME)"
+	desktop="${desktop##*= \"}"
+	desktop="${desktop%%\"}"
+	if [ "$desktop" == "" ]; then
+		desktop="none"
+	fi
 fi
 
 echo -e "${colour3}Welcome to $finurl, $(whoami)!\n"
 echo -e "${colour1}kernel   ${colour2}$(uname -sr)"
 echo -e "${colour1}arch     ${colour2}$(uname -m)"
 echo -e "${colour1}shell    ${colour2}$(basename $SHELL)"
-echo -e "${colour1}desktop  ${colour2}$desktop"
+echo -e "${colour1}env      ${colour2}$desktop"
 echo -e "${colour1}uptime  ${colour2}$(uptime -p | awk '{$1="";print $0}')"
 echo -e "${colour1}host     ${colour2}$(cat /sys/class/dmi/id/product_name) $(cat /sys/class/dmi/id/product_version)\e[0m"
