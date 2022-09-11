@@ -12,7 +12,7 @@ Simple system information script written in bash. Mostly done but I might add mo
 - Kernel name and version
 - System architecture
 - Default shell
-- Desktop environment
+- Graphical Environment
 - Uptime
 - Host machine name
 
