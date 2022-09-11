@@ -18,6 +18,5 @@ Simple system information script written in bash. Mostly done but I might add mo
 
 ### TODO:
 
-- replace DE detection with WM detection
-- maybe add more hardware info
 - change name
+- maybe add more hardware info
