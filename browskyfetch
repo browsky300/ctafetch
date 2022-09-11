@@ -1,12 +1,12 @@
 #!/bin/sh
 
-source /etc/os-release
+source /etc/os-release # i probably shouldnt do this lol
 
 colour1="\e[1;32m"
 colour2="\e[0;32m"
 colour3="\e[1;31m"
 
-finurl=$HOME_URL
+finurl=$HOME_URL # this is bad i should rewrite this
 finurl=${finurl/https:\/\//}
 finurl=${finurl/http:\/\//}
 finurl=${finurl##www.}
